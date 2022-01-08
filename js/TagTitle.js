@@ -31,8 +31,8 @@ var thayDoiNoiDung = () => {
 }
 
 // Cách cài đặt sự kiện onclick cho thẻ
-// Cách 1:
-// .onclick = callbackFunction
+/* Cách 1:
+   .onclick = callbackFunction
 
 var tagBtn = document.getElementById('btnClickMe');
 // tagBtn.onclick = thayDoiNoiDung;
@@ -42,9 +42,29 @@ tagBtn.onclick = function(){
     var tagP = document.getElementById('content');
     tagP.innerHTML = 'Đã thay đổi rồi nhé!';
 }
+*/
 
-// Cách 2:
-document.getElementById("btnClickMe").addEventListener('click',()=>{
-    var tagP = document.getElementById('content');
-    tagP.innerHTML = "Đã thay đồi rồi nhé!";
-})
+// Cách 2 addEventListener:
+// document.getElementById("btnClickMe").addEventListener('click',()=>{
+//     var tagP = document.getElementById('content');
+//     tagP.innerHTML = "Đã thay đồi rồi nhé!";
+// })
+
+/*
+    Thay đổi style của thẻ
+*/
+
+var fSize=17;
+var tagP = document.getElementById("pContent");
+tagP.style.fontSize = fSize + 'px';
+
+document.getElementById("btnZoomIn").onclick = ()=>{
+    fSize += 1;
+    //Dom đến tagP (p#pContent => gán lại style.fontSize)
+    tagP.style.fontSize = fSize + 'px';
+}
+document.getElementById("btnZoomOut").onclick = ()=>{
+    fSize -= 1;
+    //Dom đến tagP (p#pContent => gán lại style.fontSize)
+    tagP.style.fontSize = fSize + 'px';
+}
