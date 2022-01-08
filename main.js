@@ -55,6 +55,7 @@ let n = 1;
 //   console.log(`Invalid. Try again.`);
 // }
 
+/*
 switch (n) {
   case 1: {
     console.log(`One`);
@@ -75,3 +76,4 @@ switch (n) {
       console.log(`Invalid.`);
   }
 }
+*/
