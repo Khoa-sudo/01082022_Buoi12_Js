@@ -1,4 +1,3 @@
-/*
 switch (n) {
   case 1: {
     console.log(`One`);
@@ -16,7 +15,6 @@ switch (n) {
     console.log(`Five`);
   };break;
   default: {
-      console.log(`Invalid.`);
+    console.log(`Invalid.`);
   }
 }
-*/

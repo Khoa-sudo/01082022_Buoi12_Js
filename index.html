@@ -1,58 +1,176 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>JS</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-    <header></header>  
-    <section>
-        <h1>Bài học js đầu tiên</h1>
-    </section>
-    <footer></footer>
+<head>
+  <title>JS</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <header></header>
+  <div>
+    <div class="container">
+      <h1 id='title'></h1>
+      <div>
+        <input class="form-control w-50" id="txtInput">
+      </div>
+      <div>
+        <img src="images/anh_1.jpg" alt="avatar kute" id="avatar" width="300" height="300" onclick="handleClickImg()">
+      </div>
+      <div>
+        <button id="btnSubmit" onclick="handleClickBtn()">
+          Submit
+        </button>
+      </div>
+      <h3>Bài tập 1: Thay đổi nội dung text</h3>
+      <h1>Học Js tại Cybersoft</h1>
+      <p id="content">Nội dung trước khi thay đổi</p>
+      <button id="btnClickMe" onclick="clickMe()">Click Me</button>
+
+      <div>
+        <h3>Thay đổi style của thẻ</h3>
+        <p id="pContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus laudantium
+          exercitationem quisquam ipsa porro ullam architecto necessitatibus tempora? Commodi minima totam vitae velit
+          tenetur alias impedit sit voluptatem qui?</p>
+        <button id="btnZoomIn" class="btn btn-outline-primary">+</button>
+        <button id="btnZoomOut" class="btn btn-outline-success">-</button>
+      </div>
+
+    </div>
+    <div class="container">
+      <h3>Bài tập 2: Demo ứng dụng bật tắt đèn</h3>
+      <button id="btnLightOn">Bật đèn</button>
+      <img id="lightOn" src="./images/pic_bulboff.gif" alt="Đèn chiếu sáng">
+      <button id="btnLightOff">Tắt đèn</button>
+    </div>
+    <div class="container">
+      <h3>Bài tập 3: Thay đổi giao diện và css</h3>
+      <h3 id="h3_Title">Học fe tại cyberSoft</h3>
+      <p id="p_Content">Thẻ này sẽ bị ẩn đi</p>
+      <button id="btn_Change">Thay đổi nội dung</button>
+    </div>
+
+    <div class="container">
+      <h3>Bài tập 4: Xây dựng chức năng thông báo cho form đăng nhập</h3>
+      <div class="card w-50">
+        <div class="card-header text-center bg-dark text-white font-weight-bold">Đăng nhập</div>
+        <div class="card-body">
+          <div class="form-group">
+            <p>Tài khoản</p>
+            <input type="text" id="taiKhoan" class="form-control">
+          </div>
+          <div class="form-group">
+            <p>Mật khẩu</p>
+            <input type="text" id="matKhau" class="form-control">
+          </div>
+          <div class="form-group text-center">
+            <div id="notice" class="btn btn-primary">Thông báo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Array -->
+  <main class="">
+    <div class="container">
+      <h3 class="m-3">Truy xuất 1 thẻ thông qua giao diện</h3>
+      <section>Thẻ 1</section>
+      <section>Thẻ 2</section>
+      <section>Thẻ 3</section>      
+
+      <h3 class="m-3">Truy xuất qua class</h3>
+      <p class="text m-0">Thẻ 1</p>
+      <article class="text">Thẻ 2</article>
+      <nav class="text">Thẻ 3</nav>
+      <aside class="text">Thẻ 4</aside>
+
+      <h3 class="m-3">Truy vấn thông qua querySelector</h3>
+      <p id="header">Xin chào</p>
+
+      <aside class="item">Thẻ 1</aside>
+      <aside class="item">Thẻ 2</aside>
+      <aside class="item">Thẻ 3</aside>
+      <aside class="item">Thẻ 4</aside>
+      <aside class="item">Thẻ 5</aside>
+      <aside class="item">Thẻ 6</aside>
+    </div>
+  </main>
+  <div class="container">
+    <h3>Bài tập 5: Công cụ tính tiền TIP</h3>
+    <div class="card w-50">
+      <div class="card-header text-center bg-dark text-white font-weight-bold">
+        Bảng tính tiền tip
+      </div>
+      <div class="card-body">
+       
+        <div class="form-group">
+          <p>Bạn muốn tip bao nhiêu</p>
+          <input type="text" id="tongTien" class="form-control">
+        </div>
+        <div class="form-group text-center">
+          <select id="phanTramTip" class="form-control">
+            <option value="30">Tuyệt</option>
+            <option value="20">Tốt</option>
+            <option value="15">Tạm Ổn</option>
+            <option value="10">Tồi</option>
+            <option value="5">Tệ</option>
+          </select>
+          
+        </div>
+        <div class="form-group">
+          <p>Muốn share bao nhiêu người</p>
+          <input type="text" id="soNguoi" class="form-control">
+        </div>
+        <div class="form-group text-center">
+          <button id="btnTinhTien" class="btn btn-danger">
+            Tính Tiền
+          </button>
+          <div class="text-center">
+            <p>Tip trên 1 người</p>
+            <h3>
+              <span id="tienTip">0</span><span>$</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer></footer>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/NutThongBao.js"></script>
+  <script src="js/TagName.js"></script>
+  <script src="js/TinhTienTip.js"></script>
+</body>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-  </body>
-=======
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>JS</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-    <header></header>  
-    <section>
-        <h1>Bài học js đầu tiên</h1>
-    </section>
-    <footer></footer>
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-  </body>
->>>>>>> f1c44960e5d1b84e496d1ff5ced1906c57fe6a79
 </html>
